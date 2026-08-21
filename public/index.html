@@ -146,11 +146,16 @@
 
 .banner-carousel__image-wrap {
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	padding: 28px;
 	background: transparent;
 	box-shadow: none;
+}
+
+.banner-carousel__image-link {
+	display: block;
 }
 
 .banner-carousel__image {
@@ -159,6 +164,31 @@
 	height: auto;
 	max-height: 430px;
 	object-fit: contain;
+}
+
+.banner-carousel__read-more {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 42px;
+	margin-top: 22px;
+	padding: 0 24px;
+	border: 1px solid #a7322e;
+	border-radius: 10px;
+	background: #a7322e;
+	color: #ffffff !important;
+	font-family: "Playfair Display", Georgia, serif;
+	font-size: 18px;
+	font-weight: 100;
+	line-height: 1;
+	text-decoration: none;
+	transition: background 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.banner-carousel__read-more:hover {
+	background: #ffffff;
+	color: #4a0705 !important;
+	transform: translateY(-2px);
 }
 
 .banner-carousel__controls {
@@ -462,7 +492,10 @@ _W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":
 									<h2 class="banner-carousel__title banner-carousel__book-title">&#8203;The DNA of Executive Protection <br />SITE SECURITY</h2>
 								</div>
 								<div class="banner-carousel__image-wrap">
-									<img class="banner-carousel__image" src="files/images/1650308923.png" alt="The DNA of Executive Protection Site Security book cover" />
+									<a class="banner-carousel__image-link" href="about-the-book.html" aria-label="View The DNA of Executive Protection Site Security">
+										<img class="banner-carousel__image" src="files/images/1650308923.png" alt="The DNA of Executive Protection Site Security book cover" />
+									</a>
+									<a class="banner-carousel__read-more" href="about-the-book.html">Read More</a>
 								</div>
 							</section>
 
@@ -475,6 +508,7 @@ _W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":
 								</div>
 								<div class="banner-carousel__image-wrap">
 									<img class="banner-carousel__image" src="files/images/BookCover_Oldman.jpg" alt="Ambivalent Crossroads book cover" />
+									<a class="banner-carousel__read-more" href="about-the-book.html">Read More</a>
 								</div>
 							</section>
 						</div>
