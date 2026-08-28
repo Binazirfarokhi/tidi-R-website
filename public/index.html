@@ -74,259 +74,172 @@
 	position: relative;
 }
 
-.banner-carousel {
-	position: relative;
-	overflow: hidden;
+.book-showcase {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 54px;
+	align-items: start;
+	padding: 30px 0 18px;
 	text-align: left;
 }
 
-.banner-carousel__input {
-	position: absolute;
-	opacity: 0;
-	pointer-events: none;
-}
-
-.banner-carousel__track {
-	display: flex;
-	width: 200%;
-	transition: transform 420ms ease;
-}
-
-.banner-carousel__slide {
+.book-showcase__item {
 	display: grid;
-	grid-template-columns: minmax(0, 1fr) minmax(240px, 0.42fr);
-	gap: 42px;
-	align-items: center;
-	width: 50%;
-	min-height: 520px;
-	padding: 42px 0;
+	grid-template-rows: auto 1fr;
+	gap: 34px;
+	min-width: 0;
+}
+
+.book-showcase__cover-link {
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	min-height: 430px;
+	padding: 20px;
+	background: rgba(0, 0, 0, 0.12);
 	box-sizing: border-box;
 }
 
-.banner-carousel__content {
-	max-width: 820px;
-	margin: 0 auto;
-	text-align: center;
+.book-showcase__cover {
+	display: block;
+	/*width: 350px;*/
+	height: auto;
+	max-height: 405px;
+	object-fit: contain;
+	/*box-shadow: 0 22px 34px rgba(0, 0, 0, 0.32);*/
 }
 
-.banner-carousel__eyebrow {
-	margin: 0 0 30px;
-	color: #ffffff;
+.book-showcase__details {
+	position: relative;
+	padding: 0 20px 0 0;
+}
+
+.book-showcase__item + .book-showcase__item .book-showcase__details {
+	padding-left: 42px;
+	border-left: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+.book-showcase__eyebrow {
+	margin: 0 0 18px;
+	color: rgba(255, 255, 255, 0.82);
 	font-family: "Playfair Display", Georgia, serif;
-	font-size: 24px !important;
+	font-size: 18px !important;
 	font-weight: 100;
 	line-height: 1.3;
-	letter-spacing: 0.22em;
+	letter-spacing: 0.16em;
+	text-transform: uppercase;
 }
 
-.banner-wrap .banner-carousel__title {
-	margin: 0 0 34px;
+.banner-wrap .book-showcase__title {
+	margin: 0 0 18px;
 	color: #ffffff !important;
 	font-family: "Playfair Display", Georgia, serif !important;
-	font-size: 62px !important;
+	font-size: 38px !important;
 	font-weight: 100;
-	line-height: 1.08;
+	line-height: 1.16;
 }
 
-.banner-wrap .banner-carousel__text {
-	max-width: none;
-	margin: 0 0 30px;
-	color: #ffffff;
-	font-family: "Playfair Display", Georgia, serif;
-	font-size: 24px !important;
-	font-weight: 100;
-	line-height: 1.3;
-	letter-spacing: 0.22em;
-}
-
-.banner-wrap .banner-carousel__book-title {
-	font-size: 62px !important;
-	line-height: 1.1;
-}
-
-.banner-carousel__image-wrap {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	padding: 28px;
-	background: transparent;
-	box-shadow: none;
-}
-
-.banner-carousel__image-link {
+.book-showcase__rule {
 	display: block;
+	width: 38px;
+	height: 1px;
+	margin: 0 0 26px;
+	background: #a7322e;
 }
 
-.banner-carousel__image {
-	display: block;
-	width: min(100%, 320px);
-	height: auto;
-	max-height: 430px;
-	object-fit: contain;
+.banner-wrap .book-showcase__description {
+	max-width: 420px;
+	margin: 0 0 28px;
+	color: rgba(255, 255, 255, 0.9);
+	font-family: "Birdseye", sans-serif;
+	font-size: 16px !important;
+	font-weight: 500;
+	line-height: 1.75;
+	letter-spacing: 0;
 }
 
-.banner-carousel__read-more {
+.book-showcase__button {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	min-height: 42px;
-	margin-top: 22px;
-	padding: 0 24px;
+	min-height: 44px;
+	padding: 0 28px;
 	border: 1px solid #a7322e;
 	border-radius: 10px;
 	background: #a7322e;
 	color: #ffffff !important;
-	font-family: "Playfair Display", Georgia, serif;
-	font-size: 18px;
-	font-weight: 100;
+	font-family: "Montserrat", sans-serif;
+	font-size: 12px;
+	font-weight: 700;
+	letter-spacing: 0.05em;
 	line-height: 1;
 	text-decoration: none;
+	text-transform: uppercase;
 	transition: background 180ms ease, color 180ms ease, transform 180ms ease;
 }
 
-.banner-carousel__read-more:hover {
+.book-showcase__button:hover {
 	background: #ffffff;
 	color: #4a0705 !important;
 	transform: translateY(-2px);
 }
 
-.banner-carousel__controls {
-	position: absolute;
-	top: 38px;
-	left: 50%;
-	z-index: 2;
-	display: flex;
-	justify-content: center;
-	gap: 12px;
-	margin-top: 0;
-	transform: translateX(-50%);
+.book-showcase__learn-more {
+	display: inline-block;
+	margin-top: 22px;
+	color: rgba(255, 255, 255, 0.88) !important;
+	font-family: "Birdseye", sans-serif;
+	font-size: 15px;
+	font-weight: 500;
+	text-decoration: underline;
+	text-underline-offset: 5px;
 }
 
-.banner-carousel__dot {
-	display: block;
-	width: 9px;
-	height: 9px;
-	border-radius: 999px;
-	background: rgba(255, 255, 255, 0.55);
-	cursor: pointer;
-	transition: width 180ms ease, background 180ms ease;
-}
-
-.banner-carousel__arrows {
-	position: absolute;
-	top: 24px;
-	left: 0;
-	right: 0;
-	display: flex;
-	justify-content: space-between;
-	transform: none;
-	pointer-events: none;
-}
-
-.banner-carousel__arrow {
-	display: none;
-	align-items: center;
-	justify-content: center;
-	width: 42px;
-	height: 42px;
-	border-radius: 10px;
-	border: 1px solid rgba(255, 255, 255, 0.5);
-	background: rgba(0, 0, 0, 0.18);
-	color: #ffffff;
-	font-family: "Playfair Display", Georgia, serif;
-	font-size: 24px;
-	font-weight: 100;
-	line-height: 1;
-	cursor: pointer;
-	pointer-events: auto;
-	transition: background 180ms ease, border-color 180ms ease;
-}
-
-.banner-carousel__arrow:hover {
-	background: #a7322e;
-	border-color: #a7322e;
-}
-
-#banner-slide-2:checked ~ .banner-carousel__track {
-	transform: translateX(-50%);
-}
-
-#banner-slide-1:checked ~ .banner-carousel__controls label[for="banner-slide-1"],
-#banner-slide-2:checked ~ .banner-carousel__controls label[for="banner-slide-2"] {
-	width: 28px;
-	background: #a7322e;
-}
-
-#banner-slide-1:checked ~ .banner-carousel__arrows .banner-carousel__arrow--next-1,
-#banner-slide-1:checked ~ .banner-carousel__arrows .banner-carousel__arrow--prev-1,
-#banner-slide-2:checked ~ .banner-carousel__arrows .banner-carousel__arrow--next-2,
-#banner-slide-2:checked ~ .banner-carousel__arrows .banner-carousel__arrow--prev-2 {
-	display: flex;
+.book-showcase__learn-more:after {
+	content: " ->";
+	text-decoration: none;
 }
 
 @media screen and (max-width: 800px) {
-	.banner-carousel__slide {
+	.book-showcase {
 		grid-template-columns: 1fr;
-		gap: 34px;
-		min-height: 0;
-		padding: 46px 0 34px;
+		gap: 48px;
+		padding: 18px 0 8px;
 		text-align: center;
 	}
 
-	.banner-carousel__content {
-		max-width: 620px;
-		margin: 0 auto;
+	.book-showcase__cover-link {
+		min-height: 0;
 	}
 
-	.banner-wrap .banner-carousel__title {
-		font-size: 42px !important;
+	.book-showcase__details,
+	.book-showcase__item + .book-showcase__item .book-showcase__details {
+		padding: 0;
+		border-left: 0;
 	}
 
-	.banner-wrap .banner-carousel__book-title {
-		font-size: 42px !important;
+	.banner-wrap .book-showcase__title {
+		font-size: 34px !important;
 	}
 
-	.banner-carousel__image-wrap {
-		width: min(100% - 48px, 340px);
-		margin: 0 auto;
+	.book-showcase__rule {
+		margin-left: auto;
+		margin-right: auto;
 	}
 
-	.banner-carousel__arrows {
-		top: 16px;
-		bottom: auto;
-		left: 16px;
-		right: 16px;
-		transform: none;
-	}
-
-	.banner-carousel__controls {
-		position: absolute;
-		top: 30px;
-		left: 50%;
-		z-index: 2;
-		margin-top: 0;
-		transform: translateX(-50%);
-	}
-
-	.banner-carousel__arrow {
-		width: 38px;
-		height: 38px;
-		background: rgba(0, 0, 0, 0.28);
+	.banner-wrap .book-showcase__description {
+		margin-left: auto;
+		margin-right: auto;
 	}
 }
 
 @media screen and (max-width: 480px) {
-	.banner-wrap .banner-carousel__title {
-		font-size: 34px !important;
+	.book-showcase__cover {
+		width: min(100%, 235px);
 	}
 
-	.banner-wrap .banner-carousel__book-title {
-		font-size: 34px !important;
-	}
-
-	.banner-wrap .banner-carousel__text {
-		font-size: 16px !important;
+	.banner-wrap .book-showcase__title {
+		font-size: 28px !important;
 	}
 }
 </style>
@@ -497,51 +410,34 @@ _W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":
           <div class="container">
             <div class="banner">
 				<div class="wsite-section-elements">
-					<div class="banner-carousel">
-						<input class="banner-carousel__input" type="radio" name="banner-carousel" id="banner-slide-1" checked />
-						<input class="banner-carousel__input" type="radio" name="banner-carousel" id="banner-slide-2" />
+					<div class="book-showcase" aria-label="Featured books by Tibi J. Roman">
+						<section class="book-showcase__item">
+							<a class="book-showcase__cover-link" href="about-the-book.html" aria-label="View The DNA of Executive Protection Site Security">
+								<img class="book-showcase__cover" src="files/images/1650308923.png" alt="The DNA of Executive Protection Site Security book cover" />
+							</a>
+							<div class="book-showcase__details">
+								<p class="book-showcase__eyebrow">Tibi J. Roman</p>
+								<h1 class="book-showcase__title">&#8203;The DNA of Executive Protection <br />SITE SECURITY</h1>
+								<span class="book-showcase__rule" aria-hidden="true"></span>
+								<p class="book-showcase__description">An in-depth read on executive protection with a focus on site security, protocols, vulnerabilities, and best practices.</p>
+								<a class="book-showcase__button" href="bookstore.html">Buy Book</a><br />
+								<a class="book-showcase__learn-more" href="about-the-book.html">Learn more about this book</a>
+							</div>
+						</section>
 
-						<div class="banner-carousel__track">
-							<section class="banner-carousel__slide" aria-label="Featured book">
-								<div class="banner-carousel__content">
-									<p class="banner-carousel__eyebrow">Welcome to the Official Website of</p>
-									<h1 class="banner-carousel__title">TIBI J. Roman</h1>
-									<p class="banner-carousel__text">Author of</p>
-									<h2 class="banner-carousel__title banner-carousel__book-title">&#8203;The DNA of Executive Protection <br />SITE SECURITY</h2>
-								</div>
-								<div class="banner-carousel__image-wrap">
-									<a class="banner-carousel__image-link" href="about-the-book.html" aria-label="View The DNA of Executive Protection Site Security">
-										<img class="banner-carousel__image" src="files/images/1650308923.png" alt="The DNA of Executive Protection Site Security book cover" />
-									</a>
-									<a class="banner-carousel__read-more" href="about-the-book.html">Read More</a>
-								</div>
-							</section>
-
-							<section class="banner-carousel__slide" aria-label="Author profile">
-								<div class="banner-carousel__content">
-									<p class="banner-carousel__eyebrow">Welcome to the Official Website of</p>
-									<h2 class="banner-carousel__title">TIBI J. Roman</h2>
-									<p class="banner-carousel__text">Author of</p>
-									<h2 class="banner-carousel__title banner-carousel__book-title">AMBIVALENT <br /> CROSSROADS</h2>
-								</div>
-								<div class="banner-carousel__image-wrap">
-									<img class="banner-carousel__image" src="files/images/BookCover_Oldman.jpg" alt="Ambivalent Crossroads book cover" />
-									<a class="banner-carousel__read-more" href="ambivalent-crossroads.html">Read More</a>
-								</div>
-							</section>
-						</div>
-
-						<div class="banner-carousel__controls" aria-label="Carousel slides">
-							<label class="banner-carousel__dot" for="banner-slide-1" aria-label="Show slide 1"></label>
-							<label class="banner-carousel__dot" for="banner-slide-2" aria-label="Show slide 2"></label>
-						</div>
-
-						<div class="banner-carousel__arrows" aria-hidden="true">
-							<label class="banner-carousel__arrow banner-carousel__arrow--prev-1" for="banner-slide-2">&lt;</label>
-							<label class="banner-carousel__arrow banner-carousel__arrow--next-1" for="banner-slide-2">&gt;</label>
-							<label class="banner-carousel__arrow banner-carousel__arrow--prev-2" for="banner-slide-1">&lt;</label>
-							<label class="banner-carousel__arrow banner-carousel__arrow--next-2" for="banner-slide-1">&gt;</label>
-						</div>
+						<section class="book-showcase__item">
+							<a class="book-showcase__cover-link" href="ambivalent-crossroads.html" aria-label="View Ambivalent Crossroads">
+								<img class="book-showcase__cover" src="files/images/book-gpt-t.png" alt="Ambivalent Crossroads book cover" />
+							</a>
+							<div class="book-showcase__details">
+								<p class="book-showcase__eyebrow">Tibi J. Roman</p>
+								<h2 class="book-showcase__title">AMBIVALENT <br />CROSSROADS</h2>
+								<span class="book-showcase__rule" aria-hidden="true"></span>
+								<p class="book-showcase__description">A memoir bringing together family history, early brushes with danger, and 44 years of service with the Royal Canadian Mounted Police.</p>
+								<a class="book-showcase__button" href="bookstore.html">Buy Book</a><br />
+								<a class="book-showcase__learn-more" href="ambivalent-crossroads.html">Learn more about this book</a>
+							</div>
+						</section>
 					</div>
 				</div>
 			</div>

@@ -1,5 +1,18 @@
 # Prompt History
 
+## Homepage Book Showcase
+
+- Replaced the homepage carousel in `public/index.html` with a static two-column book showcase.
+- Displayed both featured books side by side using the existing cover images:
+  - `files/images/1650308923.png` for `The DNA of Executive Protection SITE SECURITY`
+  - `files/images/BookCover_Oldman.jpg` for `Ambivalent Crossroads`
+- Kept the existing site color palette, using the current burgundy, white, black, and translucent accent colors.
+- Added responsive behavior so the two-book layout stacks into a single column on smaller screens.
+- Added short book descriptions based on the existing book page metadata/content.
+- Kept the cover images and `Learn more about this book` links pointing to the individual book detail pages.
+- Changed both homepage CTA buttons from `View Book` to `Buy Book`.
+- Updated both homepage CTA button links to point to `bookstore.html`.
+
 ## Menu Updates
 
 - Identified that the main navigation is hardcoded in each exported HTML page, with separate desktop and mobile menu blocks.
