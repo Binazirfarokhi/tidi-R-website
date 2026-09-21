@@ -362,6 +362,11 @@ body .blog-sidebar h2 {
   border-top: 1px solid var(--line);
 }
 
+/* The original social/book strip is consolidated into the site footer. */
+.main-wrap .wsite-body-section[style*="height: 136px"] {
+  display: none;
+}
+
 .birdseye-header {
   color: #ffffff;
   border-color: rgba(255, 255, 255, 0.72);
@@ -535,41 +540,141 @@ blockquote {
   color: #f2dfb4;
 }
 
-.footer-social-link {
+.footer-socials {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-socials__label {
+  margin-right: 4px;
+  color: #d9dfdc;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.footer-social-icon {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
-  min-height: 46px;
-  padding: 0 18px 0 10px;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
   border: 1px solid rgba(255, 255, 255, 0.42);
   border-radius: 4px;
   color: #ffffff;
-  font-family: "Montserrat", sans-serif;
-  font-size: 13px;
-  font-weight: 600;
+  font-family: Arial, sans-serif;
+  font-size: 19px;
+  font-weight: 700;
   transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease;
 }
 
-.footer-social-link:hover,
-.footer-social-link:focus-visible {
+.footer-social-icon:hover,
+.footer-social-icon:focus-visible {
   background: var(--brass);
   border-color: var(--brass);
   color: var(--ink-deep);
 }
 
-.footer-linkedin-mark {
+.footer-social-icon--instagram {
+  position: relative;
+}
+
+.footer-social-icon--instagram:before {
+  width: 17px;
+  height: 17px;
+  border: 2px solid currentColor;
+  border-radius: 5px;
+  content: "";
+}
+
+.footer-social-icon--instagram:after {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  content: "";
+}
+
+.footer-books {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-book {
+  display: grid;
+  grid-template-columns: 78px minmax(0, 1fr);
+  grid-template-rows: 1fr auto;
+  align-items: center;
+  gap: 22px;
+  padding: 22px 30px 22px 0;
+}
+
+.footer-book + .footer-book {
+  padding-right: 0;
+  padding-left: 30px;
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-book__cover {
+  grid-row: 1 / 3;
+  display: block;
+  width: 78px;
+  height: 104px;
+  object-fit: contain;
+}
+
+.footer-book__eyebrow {
+  margin: 0 0 6px !important;
+  color: #d9c18f;
+  font-family: "Montserrat", sans-serif !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.08em;
+  line-height: 1.2 !important;
+  text-transform: uppercase;
+}
+
+.footer-book__title {
+  margin: 0 0 5px;
+  color: #ffffff;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 21px;
+  line-height: 1.25;
+}
+
+.footer-book__author {
+  margin: 0 !important;
+  color: #bdc8c3;
+  font-size: 14px !important;
+}
+
+.footer-book__button {
+  grid-column: 2;
+  justify-self: start;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 28px;
-  height: 28px;
-  border-radius: 3px;
-  background: #ffffff;
+  min-height: 44px;
+  padding: 0 22px;
+  border-radius: 4px;
+  background: var(--brass);
   color: var(--ink-deep);
-  font-family: Arial, sans-serif;
-  font-size: 17px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
   font-weight: 700;
-  line-height: 1;
+  text-transform: uppercase;
+}
+
+.footer-book__button:hover,
+.footer-book__button:focus-visible {
+  background: #ffffff;
 }
 
 .footer-meta {
@@ -601,5 +706,43 @@ blockquote {
     grid-column: auto;
     flex-direction: column;
     gap: 6px;
+  }
+
+  .footer-book {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    align-content: start;
+    gap: 12px;
+    padding: 22px 14px 22px 0;
+  }
+
+  .footer-books {
+    grid-column: auto;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .footer-book + .footer-book {
+    padding-top: 22px;
+    padding-left: 14px;
+    border-top: 0;
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .footer-book__cover {
+    grid-row: auto;
+    width: 64px;
+    height: 86px;
+  }
+
+  .footer-book__button {
+    grid-column: 1;
+    width: 100%;
+    min-height: 42px;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+
+  .footer-book__title {
+    font-size: 17px;
   }
 }

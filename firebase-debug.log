@@ -1,0 +1,99 @@
+[debug] [2026-09-21T17:00:43.454Z] ----------------------------------------------------------------------
+[debug] [2026-09-21T17:00:43.456Z] Command:       /usr/local/bin/node /Users/binazirfarokhi/.npm-global/bin/firebase deploy --only hosting --project tjroman1
+[debug] [2026-09-21T17:00:43.456Z] CLI Version:   15.29.0
+[debug] [2026-09-21T17:00:43.456Z] Platform:      darwin
+[debug] [2026-09-21T17:00:43.456Z] Node Version:  v22.20.0
+[debug] [2026-09-21T17:00:43.456Z] Detected Agent: codex_cli
+[debug] [2026-09-21T17:00:43.456Z] Time:          Mon Sep 21 2026 10:00:43 GMT-0700 (Pacific Daylight Time)
+[debug] [2026-09-21T17:00:43.456Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-09-21T17:00:43.848Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-09-21T17:00:43.848Z] > authorizing via signed-in user (saharfarokhi42@gmail.com)
+[debug] [2026-09-21T17:00:43.848Z] [iam] checking project tjroman1 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2026-09-21T17:00:43.853Z] Checked if tokens are valid: true, expires at: 1790013363472
+[debug] [2026-09-21T17:00:43.853Z] Checked if tokens are valid: true, expires at: 1790013363472
+[debug] [2026-09-21T17:00:43.853Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/tjroman1:testIamPermissions [none]
+[debug] [2026-09-21T17:00:43.853Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/tjroman1:testIamPermissions  x-goog-user-project=tjroman1
+[debug] [2026-09-21T17:00:43.853Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/tjroman1:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-09-21T17:00:44.073Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/tjroman1:testIamPermissions 200
+[debug] [2026-09-21T17:00:44.074Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/tjroman1:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-09-21T17:00:44.074Z] Checked if tokens are valid: true, expires at: 1790013363472
+[debug] [2026-09-21T17:00:44.074Z] Checked if tokens are valid: true, expires at: 1790013363472
+[debug] [2026-09-21T17:00:44.074Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/tjroman1 [none]
+[debug] [2026-09-21T17:00:44.379Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/tjroman1 200
+[debug] [2026-09-21T17:00:44.379Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/tjroman1 {"projectId":"tjroman1","projectNumber":"896858890107","displayName":"tjroman1","name":"projects/tjroman1","resources":{"hostingSite":"tjroman1"},"state":"ACTIVE","labels":{"firebase":"enabled"},"etag":"1_1f2af817-098f-47fb-a8f9-626873b0197e"}
+[info] 
+[info] === Deploying to 'tjroman1'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2026-09-21T17:00:44.383Z] Checked if tokens are valid: true, expires at: 1790013363472
+[debug] [2026-09-21T17:00:44.384Z] Checked if tokens are valid: true, expires at: 1790013363472
+[debug] [2026-09-21T17:00:44.384Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/tjroman1/sites/tjroman1 [none]
+[debug] [2026-09-21T17:00:44.954Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/tjroman1/sites/tjroman1 200
+[debug] [2026-09-21T17:00:44.954Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/tjroman1/sites/tjroman1 {"name":"projects/tjroman1/sites/tjroman1","defaultUrl":"https://tjroman1.web.app","type":"DEFAULT_SITE"}
+[debug] [2026-09-21T17:00:44.956Z] Checked if tokens are valid: true, expires at: 1790013363472
+[debug] [2026-09-21T17:00:44.956Z] Checked if tokens are valid: true, expires at: 1790013363472
+[debug] [2026-09-21T17:00:44.957Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/tjroman1/versions [none]
+[debug] [2026-09-21T17:00:44.957Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/tjroman1/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2026-09-21T17:00:45.377Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/tjroman1/versions 200
+[debug] [2026-09-21T17:00:45.378Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/tjroman1/versions {"name":"projects/896858890107/sites/tjroman1/versions/96880df119a358e8","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[tjroman1]: beginning deploy... 
+[info] i  hosting[tjroman1]: found 25 files in public 
+[debug] [2026-09-21T17:00:45.396Z] [hosting] uploading with 200 concurrency
+[debug] [2026-09-21T17:00:45.401Z] Checked if tokens are valid: true, expires at: 1790013363472
+[debug] [2026-09-21T17:00:45.401Z] Checked if tokens are valid: true, expires at: 1790013363472
+[debug] [2026-09-21T17:00:45.402Z] [hosting] hash cache [cHVibGlj] stored for 25 files
+[debug] [2026-09-21T17:00:45.402Z] [hosting][hash queue][FINAL] {"max":4,"min":0,"avg":0.16,"active":0,"complete":25,"success":25,"errored":0,"retried":0,"total":25,"elapsed":5}
+[debug] [2026-09-21T17:00:45.403Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/896858890107/sites/tjroman1/versions/96880df119a358e8:populateFiles [none]
+[debug] [2026-09-21T17:00:45.403Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/896858890107/sites/tjroman1/versions/96880df119a358e8:populateFiles {"files":{"/reviews-891839-899175.html":"8403fe90d6ede8f177d3b97c5e4a6053ea2f3a9e23c906621859767b14bfb1f5","/news-and-events-891839.html":"e7ebe942c92164316ef30217547c35cd6f4aa92d9836e2023e2268592f9d68c1","/contact.html":"4f1a16121ce9996820b1727c78a9b68bda980ba1188343a22c6a5f4d9f41ac7e","/bookstore.html":"23899c4c929478af4efff0b9f3d8d89140a1675fa1a0139ecbe1594c4d4b0b04","/ambivalent-crossroads.html":"7c43eff8d9ebfd8305f31288c0b7186d4bd537744f910eb684500eb61612ca79","/about-the-book.html":"b89ba27af1649d3e0f462fb704c520c163d52539fc24066af71e153ab0e482e7","/about-the-author.html":"321d4ef945f07b0ebae5802ea47470aaf5bb55db8b143b78993ddc81c9a002f5","/404.html":"df26ce13c54aa7a54f162c8d5b27f606b151fb7d8ff6dcec8d1adf151374963d","/files/templateArtifacts.js?1680742350":"4c13910ae101d7e0dd2220b181064e12dc58ea73f40c64c10c2a33033ac9628c","/files/main_style.css?1680742350.css":"0b927ca579d45586b6f341e684bfe1bc322a7a0a502a6be69fa7284a2f27a845","/files/theme/plugins.js?1565969634":"5f64bf668d03b3d5a87018aedea35e8a5f7236089954c661692571c28a101fd3","/files/theme/custom.js?1565969634":"f41ac3fd9cc50d796d18ff204a41efe424d3f00a7cbf70a87e869ec1bc95954b","/files/images/select-dropdown.svg":"147a0a11643a8515c9e5562822287cccbe47b17c34ff054ead73fc25c9c0afb1","/files/images/default-bg.jpg":"db3d2fc3be2a3aa3cf8ccdc5e9a40893eff4b2a538a1b3324aef5d40057b9193","/files/images/cover-front-33.jpg":"5e5ec0f006fe6fea128188bda6f7b1973107d7874c7cf66e02991224749f5ebf","/files/images/book-gpt.png":"15c09f2be38e109c6e090519645c608549871056d4f078b45e32ec15fc4e781a","/files/images/book-gpt-t3.png":"825a016fb47ac07ea1ffd51de1272089c8f87ea46e2b1d5ab0f7bb91849772a9","/files/images/book-gpt-t1.png":"b7e4ed1db922cc4ce81c9910f4e71f6fbcdc0524355d7dd3f474504f773ab1ab","/files/images/book-gpt-t.png":"fde8872e49eb04bbe336a3ebfe24ec4a91a86e9410f0b2826222163d485d69cb","/files/images/bg-img.jpg":"f0fe31cf3cc2a5b799111e9cf193041f90106130da384740c7ecd01b1e6cc08a","/files/images/BookCover_Oldman2.jpg":"5b896a34aba37d78219c96620c330977503f88d55936986f5288cf7f57f348ec","/files/images/BookCover_Oldman.png":"b1da365a1110ca51cc4ca1ea0e2db866841efc6a3df2b2f274a5af0ad0c3e382","/files/images/1650318410.png":"e2e5f28bdb501d2e5ad6628b3e17f3d599c617212eb89f9916e8c78108083621","/files/images/1650308923.png":"17fe6442d02d35e7a26ca58b9908b844fb82f9f5c9fa98f8cd29822da7d76410","/index.html":"ef8c1199e8bf881607d11ce3d611ff5d4a790ee4a1792f072b7b6db5420f2583"}}
+[debug] [2026-09-21T17:00:45.647Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/896858890107/sites/tjroman1/versions/96880df119a358e8:populateFiles 200
+[debug] [2026-09-21T17:00:45.648Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/896858890107/sites/tjroman1/versions/96880df119a358e8:populateFiles {"uploadRequiredHashes":["ef8c1199e8bf881607d11ce3d611ff5d4a790ee4a1792f072b7b6db5420f2583"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/tjroman1/versions/96880df119a358e8/files"}
+[debug] [2026-09-21T17:00:45.648Z] Checked if tokens are valid: true, expires at: 1790013363472
+[debug] [2026-09-21T17:00:45.649Z] Checked if tokens are valid: true, expires at: 1790013363472
+[debug] [2026-09-21T17:00:45.649Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/tjroman1/versions/96880df119a358e8/files/ef8c1199e8bf881607d11ce3d611ff5d4a790ee4a1792f072b7b6db5420f2583 [none]
+[debug] [2026-09-21T17:00:45.649Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/tjroman1/versions/96880df119a358e8/files/ef8c1199e8bf881607d11ce3d611ff5d4a790ee4a1792f072b7b6db5420f2583 [stream]
+[debug] [2026-09-21T17:00:45.652Z] [hosting][populate queue][FINAL] {"max":248,"min":248,"avg":248,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":251}
+[debug] [2026-09-21T17:00:45.652Z] [hosting] uploads queued: 1
+[debug] [2026-09-21T17:00:46.535Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/tjroman1/versions/96880df119a358e8/files/ef8c1199e8bf881607d11ce3d611ff5d4a790ee4a1792f072b7b6db5420f2583 200
+[debug] [2026-09-21T17:00:46.535Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/tjroman1/versions/96880df119a358e8/files/ef8c1199e8bf881607d11ce3d611ff5d4a790ee4a1792f072b7b6db5420f2583 [stream]
+[debug] [2026-09-21T17:00:46.535Z] [hosting][upload queue][FINAL] {"max":887,"min":887,"avg":887,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":887}
+[info] i  hosting: upload complete 
+[info] ✔  hosting[tjroman1]: file upload complete 
+[debug] [2026-09-21T17:00:46.535Z] [hosting] deploy completed after 1151ms
+[debug] [2026-09-21T17:00:46.535Z] [
+  {
+    "config": {
+      "public": "public",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "site": "tjroman1"
+    },
+    "version": "projects/896858890107/sites/tjroman1/versions/96880df119a358e8"
+  }
+]
+[info] i  hosting[tjroman1]: finalizing version... 
+[debug] [2026-09-21T17:00:46.536Z] Checked if tokens are valid: true, expires at: 1790013363472
+[debug] [2026-09-21T17:00:46.536Z] Checked if tokens are valid: true, expires at: 1790013363472
+[debug] [2026-09-21T17:00:46.536Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/tjroman1/versions/96880df119a358e8 updateMask=status%2Cconfig
+[debug] [2026-09-21T17:00:46.536Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/tjroman1/versions/96880df119a358e8 {"status":"FINALIZED","config":{}}
+[debug] [2026-09-21T17:00:46.797Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/tjroman1/versions/96880df119a358e8 200
+[debug] [2026-09-21T17:00:46.797Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/tjroman1/versions/96880df119a358e8 {"name":"projects/896858890107/sites/tjroman1/versions/96880df119a358e8","status":"FINALIZED","config":{},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2026-09-21T17:00:45.099863Z","createUser":{"email":"saharfarokhi42@gmail.com"},"finalizeTime":"2026-09-21T17:00:46.740378Z","finalizeUser":{"email":"saharfarokhi42@gmail.com"}}
+[debug] [2026-09-21T17:00:46.797Z] [hosting] finalized version for tjroman1:[object Object]
+[info] ✔  hosting[tjroman1]: version finalized 
+[info] i  hosting[tjroman1]: releasing new version... 
+[debug] [2026-09-21T17:00:46.798Z] Checked if tokens are valid: true, expires at: 1790013363472
+[debug] [2026-09-21T17:00:46.798Z] Checked if tokens are valid: true, expires at: 1790013363472
+[debug] [2026-09-21T17:00:46.798Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/tjroman1/channels/live/releases versionName=projects%2F896858890107%2Fsites%2Ftjroman1%2Fversions%2F96880df119a358e8
+[debug] [2026-09-21T17:00:46.798Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/tjroman1/channels/live/releases {}
+[debug] [2026-09-21T17:00:47.084Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/tjroman1/channels/live/releases 200
+[debug] [2026-09-21T17:00:47.085Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/tjroman1/channels/live/releases {"name":"projects/896858890107/sites/tjroman1/channels/live/releases/1790010046462000","version":{"name":"projects/896858890107/sites/tjroman1/versions/96880df119a358e8","status":"FINALIZED","config":{},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2026-09-21T17:00:45.099863Z","createUser":{"email":"saharfarokhi42@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocIIKw2dM4fC7pO8JVeG2brOMlMWKKE5z-1U9eywPdyNP43MK60"},"finalizeTime":"2026-09-21T17:00:46.740378Z","finalizeUser":{"email":"saharfarokhi42@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocIIKw2dM4fC7pO8JVeG2brOMlMWKKE5z-1U9eywPdyNP43MK60"}},"type":"DEPLOY","releaseTime":"2026-09-21T17:00:46.462Z","releaseUser":{"email":"saharfarokhi42@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocIIKw2dM4fC7pO8JVeG2brOMlMWKKE5z-1U9eywPdyNP43MK60"}}
+[debug] [2026-09-21T17:00:47.085Z] [hosting] release: {"name":"projects/896858890107/sites/tjroman1/channels/live/releases/1790010046462000","version":{"name":"projects/896858890107/sites/tjroman1/versions/96880df119a358e8","status":"FINALIZED","config":{},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2026-09-21T17:00:45.099863Z","createUser":{"email":"saharfarokhi42@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocIIKw2dM4fC7pO8JVeG2brOMlMWKKE5z-1U9eywPdyNP43MK60"},"finalizeTime":"2026-09-21T17:00:46.740378Z","finalizeUser":{"email":"saharfarokhi42@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocIIKw2dM4fC7pO8JVeG2brOMlMWKKE5z-1U9eywPdyNP43MK60"}},"type":"DEPLOY","releaseTime":"2026-09-21T17:00:46.462Z","releaseUser":{"email":"saharfarokhi42@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocIIKw2dM4fC7pO8JVeG2brOMlMWKKE5z-1U9eywPdyNP43MK60"}}
+[info] ✔  hosting[tjroman1]: release complete 
+[info] 
+[info] ✔  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/tjroman1/overview
+[info] Hosting URL: https://tjroman1.web.app
