@@ -1,49 +1,3 @@
-.author-content {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: left;
-}
-
-.author-content p.paragraph,
-.author-content ul.paragraph {
-  margin: 0 auto 16px;
-  padding: 0;
-  line-height: 1.7;
-  text-align: left;
-}
-
-.author-content h2.wsite-content-title {
-  margin: 0 0 20px;
-  text-align: left;
-}
-
-.author-content h3.wsite-content-title {
-  margin: 28px 0 14px;
-  font-size: 21px;
-  line-height: 1.4;
-  text-align: left;
-}
-
-.author-content ul.paragraph {
-  list-style-type: disc;
-  list-style-position: outside;
-  padding-left: 1.4em;
-}
-
-.author-content ul.paragraph li {
-  margin: 0 0 6px;
-  padding: 0;
-  text-align: left;
-}
-
-.author-content hr.styled-hr {
-  margin: 28px auto;
-}
-
-.author-content > :last-child {
-  margin-bottom: 0;
-}
-
 ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, body, html, div.paragraph, blockquote, fieldset, input { margin: 0; padding: 0; }
 ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, body, html, p, blockquote, fieldset, input { margin: 0; padding: 0; }
  .wsite-form-field input[type='text'], .wsite-form-field input[type='email'], .wsite-form-field textarea, .wsite-form-field select, .wsite-form-field input[type='radio'], .wsite-form-field input[type='checkbox'], .wsite-com-product-option-groups input[type='text'], .wsite-com-product-option-groups input[type='email'], .wsite-com-product-option-groups textarea, .wsite-com-product-option-groups select, .wsite-com-product-option-groups input[type='radio'], .wsite-com-product-option-groups input[type='checkbox'] { -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; -webkit-appearance: none; -moz-appearance: none; appearance: none; text-shadow: none; }
@@ -1066,4 +1020,68 @@ body.wsite-page-bookstore .main-wrap .container {
   .footer-book__title {
     font-size: 17px;
   }
+}
+
+/* Consistent reading rhythm across the site. */
+html:root body :is(p, div.paragraph, li, h1, h2, h3, h4, h5, h6, a, span, strong, b, label, input, textarea, select, button, blockquote) {
+  line-height: 1.7 !important;
+}
+
+/* Keep author copy and list text on the same left edge. */
+#wsite-content .author-content {
+  width: 100%;
+  max-width: 780px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+#wsite-content .author-content p.paragraph,
+#wsite-content .author-content ul.paragraph {
+  width: 100%;
+  max-width: none;
+  margin: 0 0 16px;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+#wsite-content .author-content h2.wsite-content-title {
+  margin: 0 0 20px;
+  text-align: center;
+}
+
+#wsite-content .author-content h3.wsite-content-title {
+  margin: 28px 0 14px;
+  font-size: 21px;
+  text-align: center;
+}
+
+#wsite-content .author-content ul.paragraph {
+  list-style: disc outside;
+}
+
+#wsite-content .author-content ul.paragraph li {
+  margin: 0 0 6px;
+  padding: 0;
+  text-align: left;
+}
+
+#wsite-content .author-content strong,
+#wsite-content .author-content b {
+  display: block;
+  text-align: center;
+}
+
+#wsite-content p:has(> strong:only-child),
+#wsite-content p:has(> b:only-child) {
+  text-align: center;
+}
+
+#wsite-content .author-content hr.styled-hr {
+  margin: 28px auto;
+}
+
+#wsite-content .author-content > :last-child {
+  margin-bottom: 0;
 }
