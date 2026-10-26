@@ -56,3 +56,51 @@
 9. `update my propmt history`
 10. `give me all prompt I gave it in this thread`
 11. `add them to my propmt hsotory`
+
+## Updates — October 26, 2026
+
+- Added the bold notice “Book will be available for sale in November 2026.” beside the Ambivalent Crossroads purchase areas on the homepage and bookstore page.
+- Restored the original FriesenPress text purchase button for The DNA of Executive Protection Site Security, linking to `https://books.friesenpress.com/store/title/119734000166736589`. The original purchase control was a text button, not a graphic logo.
+- Replaced the About the Author biography and author’s comments with the supplied attachment, preserving its wording and career bullet points. Updated the page description metadata.
+- Refined the author page to use a centered, 780px-wide content column, left-aligned paragraphs and bullet text, centered headings and emphasized text, and consistent paragraph spacing.
+- Standardized text line height to `1.7` across the site in the shared stylesheet.
+- Preserved a date discrepancy for review: the supplied biography says November 2027, while the purchase notices say November 2026.
+- Investigated deployment visibility: at the time checked, the live HTML and stylesheet on both `tjroman.com` and `www.tjroman.com` matched the local files. Responses allowed one hour of caching; recommended a hard refresh or private window.
+- Explained GA4 setup and the Measurement ID or Editor invitation needed from the owner. Google Analytics has not been installed.
+- Added `public/files/book-effects.css` and `public/files/book-effects.js`, linked from all eight content pages.
+- Added a decorative letter trail to the homepage banner, limited to mouse input, with bounded particle count and cleanup.
+- Added subtle cover tilts, soft shadows, purchase-card styling, button hover effects, keyboard focus outlines, release-date labels, and scroll entrance animations.
+- Included reduced-motion support and excluded touch input from the letter trail. Content remains visible without JavaScript.
+- Added a cream paper-style background with gold and sage accents, forest-green banners, and a matching footer, including the About the Author page.
+- Corrected the background override to preserve the existing `bg-img.jpg` image on both single-book pages.
+- Added a short, soft beep on book-cover clicks, including keyboard activation of linked covers. Ordinary same-tab cover links wait 120ms for the tone; modified clicks retain their normal behavior. Unsupported audio falls back to normal links.
+- Updated asset version query strings to refresh the effect files after deployment.
+- Verified JavaScript syntax, effect asset links, particle limits and cleanup, reduced-motion and touch exclusions, beep/navigation behavior, original book background references, and whitespace checks. Visual browser verification remains outstanding.
+- These design and sound changes were saved locally; no Firebase deployment was performed by the assistant.
+
+## Additional User Prompts From This Thread — October 26, 2026
+
+The following continues the earlier prompt list. Attachment contents are summarized where noted.
+
+12. Asked to add “Book will be available for sale in Nov 2026” to the buy section for Ambivalent Crossroads.
+13. `make it bold`
+14. Asked to restore the original FriesenPress purchase icon and link, first explaining the proposed work.
+15. Repeated the request to restore the FriesenPress purchase icon and link, asking to explain first.
+16. Authorized adding the FriesenPress purchase icon and link.
+17. `what is the icon for FriesenPress ? tell me here  ?`
+18. `replace this text with about me content that is currently in the site.` — supplied a text attachment containing a new biography and author’s comments.
+19. `make sureall text are centered , do not add wiered spacing like the one you did, make the text appealing for reader to read`
+20. `do not remove the bullet points it was in the initial text`
+21. `do not centered the text looks bad, make the start from left but cantered in the page`
+22. `align the content start all from left in the center of the the page, all bold text should be text-align  : center, add same line height for all text all over the site` — included a screenshot showing inconsistent text alignment and list spacing.
+23. `why on the live site even I added firebase deploy it does not  show the changes ?`
+24. Supplied `https://tjroman.com/about-the-author.html` as the exact live address being checked.
+25. `how can I add google analytics to his website? tell me here? what do I need from him?`
+26. Asked for design ideas including letters moving around the mouse, animations, shadows, and more appealing book-purchase styling.
+27. `ok add then`
+28. `add a very appelaing background to my website`
+29. `do the same for about me as well`
+30. `do not remove the background image which was already there in the book section`
+31. `add a sound once I click on the book it says beep`
+32. `tell me in bullet point what you added I want to send them to the owenr of website`
+33. `update the propmt histroy as well`
