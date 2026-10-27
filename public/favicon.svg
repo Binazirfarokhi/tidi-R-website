@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <title>Tibi J. Roman — TR</title>
+  <rect width="64" height="64" rx="12" fill="#17352f"/>
+  <g fill="#ead9ad">
+    <path d="M9 18h24v9h-2l-2-6h-5v22l4 1v2H14v-2l4-1V21h-5l-2 6H9z"/>
+    <path fill-rule="evenodd" d="M33 18h12c8 0 12 3 12 8 0 4-3 7-7 8l7 9 3 1v2h-9l-9-12h-1v9l4 1v2H32v-2l3-1V21l-2-1zm8 3v10h3c5 0 7-2 7-5s-2-5-7-5z"/>
+  </g>
+</svg>
