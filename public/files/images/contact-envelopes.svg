@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="440" viewBox="0 0 560 440" fill="none">
+  <defs>
+    <g id="envelope" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="0" y="0" width="104" height="70" rx="5"/>
+      <path d="m3 5 43 32a10 10 0 0 0 12 0l43-32M3 66l32-28m66 28L69 38"/>
+    </g>
+  </defs>
+  <g stroke="#7c8b79" stroke-width="1.3">
+    <use href="#envelope" transform="translate(54 67) rotate(-16 52 35)"/>
+    <use href="#envelope" transform="translate(355 292) rotate(14 52 35)"/>
+  </g>
+  <g stroke="#b1996d" stroke-width="1.2">
+    <use href="#envelope" transform="translate(360 56) rotate(12 52 35) scale(.72)"/>
+    <use href="#envelope" transform="translate(115 288) rotate(-9 52 35) scale(.78)"/>
+  </g>
+  <g stroke="#b1996d" stroke-width="1" stroke-linecap="round" opacity=".65">
+    <path d="M236 192h20m-10-10v20M486 210h12m-6-6v12M38 229h10m-5-5v10"/>
+  </g>
+</svg>
